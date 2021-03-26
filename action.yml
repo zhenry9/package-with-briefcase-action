@@ -1,6 +1,6 @@
 # action.yaml
 name: 'Package with Briefcase'
-description: 'Customizable GitHub Action to package your python code with Beeware\'s Briefcase'
+description: 'Customizable GitHub Action to package your Python code with Briefcase'
 branding:
   icon: 'box'
   color: 'blue'
