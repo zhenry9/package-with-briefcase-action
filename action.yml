@@ -1,0 +1,28 @@
+# action.yaml
+name: 'Package with Briefcase'
+description: 'Customizable GitHub Action to package your python code with Beeware\'s Briefcase'
+branding:
+  icon: 'box'
+  color: 'blue'
+inputs:
+  path:
+    description: 'Directory containing pyproject.toml.'
+    required: True
+    default: .
+  platform:
+    description: 'Platform for briefcase build.'
+    required: True
+  output_format:
+    description: 'Output format for briefcase package (e.g. 'msi').'
+    required: False
+outputs:
+  output:
+    description: 'The output of briefcase.'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
+    - ${{ inputs.platform }}
+    - ${{ inputs.output_format }}
