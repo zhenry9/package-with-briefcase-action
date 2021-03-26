@@ -13,7 +13,7 @@ inputs:
     description: 'Platform for briefcase build.'
     required: True
   output_format:
-    description: 'Output format for briefcase package (e.g. 'msi').'
+    description: 'Output format for briefcase package (e.g. msi).'
     required: False
 outputs:
   output:
